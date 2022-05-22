@@ -1,0 +1,19 @@
+
+<!--Parte visual da listagem de alunos-->
+<h3 style="color:blue;" class="display_4">UNINTER - Alunos cadastrados</h3>
+<table class="table table-striped">
+    <tr class="table-primary">
+        <th style="color:darkblue;">Nome</th>
+        <th style="color:darkblue;">RU</th>
+        <th style="color:darkblue;">Curso</th>
+        <th style="color:darkblue;">Data de nascimento</th>
+        <th style="color:darkblue;">CPF</th>
+    </tr>
+    <tr *ngFor="let student of studentList">
+        <td>{{ student.name }}</td>
+        <td>{{ student.ru }}</td>
+        <td>{{ student.course }}</td>
+        <td>{{ student.birthDate }}</td>
+        <td>{{ student.cpf }}</td>
+    </tr>
+</table>

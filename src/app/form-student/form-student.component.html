@@ -1,0 +1,36 @@
+<!-- tela de formulário para inserir informações -->
+
+<h1 class="display_4">UNINTER - Alunos</h1>
+<img src="https://sbcomunicacoes.com.br/wp-content/uploads/2021/08/uninter-logo-1.png" alt="Girl in a jacket" style="width:380px;height:250px;">
+<br>
+<br>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmitForm(form)">
+    <div class="input-group-prepend">
+        <label style="color:blue;" for="name">Insira seu nome:  </label>
+        <input id="name" type="text" #name="ngModel" [(ngModel)]="student.name" class = "form-student" name="name" />
+    </div>
+    <br>
+    <div class="form-group">
+        <label style="color:blue;" for="ru">Insira seu RU:  </label>
+        <input id="ru" type="text" #ru="ngModel" [(ngModel)]="student.ru" class = "form-student" name="ru"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label style="color:blue" for="course">Insira seu Curso:  </label>
+        <input id="course" type="text" #course="ngModel" [(ngModel)]="student.course" class = "form-student" name="course"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label style="color:blue" for="birthDate">Data de nascimento:  </label>
+        <input id="birthDate" type="text" #birthDate="ngModel" [(ngModel)]="student.birthDate" class = "form-student" name="birthDate"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <label style="color:blue" for="cpf">CPF:  </label>
+        <input id="cpf" type="text" #cpf="ngModel" [(ngModel)]="student.cpf" class = "form-student" name="cpf"/>
+    </div>
+    <br>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+    </div>
+</form>
